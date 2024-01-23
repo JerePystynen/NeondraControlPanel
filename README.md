@@ -1,2 +1,6 @@
-# NeondraControlPanel
-A control panel HTML website served by and for an ESP8266, which then requests files from neondra.com.
+# Neondra Control Panel
+
+Communication is established between the ESP8266 kiosk and the client.
+
+## Audio Player
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFPlayer Mini Control</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="sexy-slider">
+        <input type="range" name="" id="" min="0" max="100" value="50">
+        <div class="sliding-element"></div>
+        <span class="value">50%</span>
+    </div>
+    <p><a href='/play'>Play</a></p>
+    <p><a href='/stop'>Stop</a></p>
+    <p><a href='/volumeup'>Volume Up</a></p>
+    <p><a href='/volumedown'>Volume Down</a></p>
+    <p>Current Status:currentStatus</p>
+    <p>Current Volume:String(currentVolume)</p>
+
+    <script>
+        Array.from(document.getElementsByClassName('sexy-slider')).forEach(e => {
+            e.getElementsByTagName('input')[0].oninput = function (event) {
+                e.children[1].style.height = `${this.value }%`;
+                e.children[2].innerText = `${this.value}%`;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
